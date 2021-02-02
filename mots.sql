@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 02 fév. 2021 à 17:25
+-- Généré le : mar. 02 fév. 2021 à 17:49
 -- Version du serveur :  10.4.17-MariaDB
 -- Version de PHP : 8.0.0
 
@@ -71,7 +71,96 @@ INSERT INTO `mots` (`id`, `mots`) VALUES
 (32, 'ammonite'),
 (33, 'amertume'),
 (34, 'analyste'),
-(35, 'audience');
+(35, 'audience'),
+(36, 'bactérie'),
+(37, 'babouins'),
+(38, 'bakélite'),
+(39, 'bancaire'),
+(40, 'barbecue'),
+(41, 'barytons'),
+(42, 'baroufle'),
+(43, 'basculés'),
+(44, 'beaucoup'),
+(45, 'bicolore'),
+(46, 'biotites'),
+(47, 'bitturer'),
+(48, 'blafards'),
+(49, 'brouette'),
+(50, 'cabestan'),
+(51, 'cabinets'),
+(52, 'cacatois'),
+(53, 'calciner'),
+(54, 'calomnie'),
+(55, 'cailloux'),
+(56, 'calcaire'),
+(57, 'calandre'),
+(58, 'calanque'),
+(59, 'canicule'),
+(60, 'cambrure'),
+(61, 'capuchon'),
+(62, 'canotier'),
+(63, 'canadien'),
+(64, 'capturés'),
+(65, 'carottes'),
+(66, 'cathéter'),
+(67, 'cavernes'),
+(68, 'cercueil'),
+(69, 'cerfeuil'),
+(70, 'catarrhe'),
+(71, 'ceinture'),
+(72, 'cervoise'),
+(73, 'clitoris'),
+(74, 'concubin'),
+(75, 'danseuse'),
+(76, 'dermeste'),
+(77, 'dauphins'),
+(78, 'diarrhée'),
+(79, 'daurades'),
+(80, 'dessiner'),
+(81, 'dessaler'),
+(82, 'diaspora'),
+(83, 'descente'),
+(84, 'diamètre'),
+(85, 'diapason'),
+(86, 'diplopie'),
+(87, 'diadèmes'),
+(88, 'diamants'),
+(89, 'destrier'),
+(90, 'digestif'),
+(91, 'différés'),
+(92, 'digitaux'),
+(93, 'diptyque'),
+(94, 'diorites'),
+(95, 'dialyses'),
+(96, 'dextrose'),
+(97, 'discorde'),
+(98, 'diérèses'),
+(99, 'doctrine'),
+(100, 'detritus'),
+(101, 'ectasies'),
+(102, 'ellipses'),
+(103, 'éléphant'),
+(104, 'embarras'),
+(105, 'embourbé'),
+(106, 'enclaves'),
+(107, 'esclaves'),
+(108, 'endémies'),
+(109, 'enquêtes'),
+(110, 'ennuyant'),
+(111, 'enrhumés'),
+(112, 'ensilage'),
+(113, 'enticher'),
+(114, 'entrevue'),
+(115, 'ergotage'),
+(116, 'exaucées'),
+(117, 'exemptes'),
+(118, 'exécuter'),
+(119, 'éclosion'),
+(120, 'éducatif'),
+(121, 'éléments'),
+(122, 'évolutif'),
+(123, 'ecureuil'),
+(124, 'escalope');
 
 --
 -- Index pour les tables déchargées
@@ -91,7 +180,7 @@ ALTER TABLE `mots`
 -- AUTO_INCREMENT pour la table `mots`
 --
 ALTER TABLE `mots`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=125;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
