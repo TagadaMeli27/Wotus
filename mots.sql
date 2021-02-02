@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 02 fév. 2021 à 18:20
+-- Généré le : mar. 02 fév. 2021 à 18:30
 -- Version du serveur :  10.4.17-MariaDB
 -- Version de PHP : 8.0.0
 
@@ -390,7 +390,62 @@ INSERT INTO `mots` (`id`, `mots`) VALUES
 (351, 'sonorité'),
 (352, 'saugrenu'),
 (353, 'seringue'),
-(354, 'serveurs');
+(354, 'serveurs'),
+(355, 'scorpion'),
+(356, 'slalomer'),
+(357, 'septieme'),
+(358, 'secteurs'),
+(359, 'soupçons'),
+(360, 'sequence'),
+(361, 'sonnette'),
+(362, 'simagree'),
+(363, 'salivant'),
+(364, 'sanglant'),
+(365, 'simuler'),
+(366, 'surcroit'),
+(367, 'sanction'),
+(368, 'seconder'),
+(369, 'surplace'),
+(370, 'sculpter'),
+(371, 'tournois'),
+(372, 'torsades'),
+(373, 'tangage'),
+(374, 'tailleur'),
+(375, 'touriste'),
+(376, 'tracteur'),
+(377, 'techniqu'),
+(378, 'tremplin'),
+(379, 'triomphe'),
+(380, 'traduire'),
+(381, 'tenacite'),
+(382, 'timidité'),
+(383, 'traction'),
+(384, 'tatouage'),
+(385, 'toilerie'),
+(386, 'toxicité'),
+(387, 'tornades'),
+(388, 'tomahawk'),
+(389, 'unanimes'),
+(390, 'urinaire'),
+(391, 'urgences'),
+(392, 'ursuline'),
+(393, 'uppercut'),
+(394, 'virtuose'),
+(395, 'violence'),
+(396, 'vacherin'),
+(397, 'verandas'),
+(398, 'wagonnet'),
+(399, 'walkyrie'),
+(400, 'westerns'),
+(401, 'xanthine'),
+(402, 'yoghourt'),
+(403, 'zeppelin'),
+(404, 'zoologie'),
+(405, 'zoophile'),
+(406, 'zodiaque'),
+(407, 'zieutées'),
+(408, 'zizanies'),
+(409, 'zébrures');
 
 --
 -- Index pour les tables déchargées
@@ -410,7 +465,7 @@ ALTER TABLE `mots`
 -- AUTO_INCREMENT pour la table `mots`
 --
 ALTER TABLE `mots`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=355;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=410;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
