@@ -1,4 +1,4 @@
-html, body {margin: 0; padding: 0; background-color: #222222;}
+html, body {margin: 0; padding: 0; background-color: #ebebeb;}
 
 main
 {
@@ -6,22 +6,60 @@ main
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    color: #ffffff;
+    height: 80vh;
+    color: #222222;
+}
+
+footer
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #222222;
+}
+
+#BtnFooter
+{
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    background-color:#148fe9;
+    color: #222222;
+}
+
+
+#BtnFooter:hover
+{
+    cursor: pointer;
+    background-color:#1185d9;
 }
 
 input[type="button"]
 {
     width: 200px;
-    padding: 20px;
+    padding: 10px;
+    margin: 20px;
     font-size: 2em;
     font-weight: bold;
-    background-color: LightGreen;
+    background-color:#fff300;
     color: #222222;
 }
 
 input[type="button"]:hover
 {
     cursor: pointer;
-    background-color: rgb(92, 177, 92);
+    background-color:#efe400;
+}
+
+#regle
+{   
+    position:absolute;
+    display:none;
+    background-color:#ebebeb;
+    width: 400px;
+    height: 400px;
+    border:black solid 2px;
 }
