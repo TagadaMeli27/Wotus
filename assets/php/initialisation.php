@@ -23,8 +23,8 @@ $req->execute(array($random));
 
 // Le mot à trouver et son nombre de lettre
 $mot = $req->fetch()[0];
-echo $mot."<br/>";
-$nombreLettres = 8;
+$_SESSION["mot"] = $mot;
+$nombreLettres = $_SESSION["nombreLettres"];
 
 function randomLettre($mot, $nombreLettres)
 {
@@ -36,7 +36,6 @@ function randomLettre($mot, $nombreLettres)
 
 // La lettre affichée au lancement du jeu
 $tabLettre = randomLettre($mot, $nombreLettres);
-echo "La lettre tirée est la lettre : ".$tabLettre["lettre"]." et sa position dans le mot : ".$tabLettre["indice"]."<br/>";
 
 // Création du mot brouillé sous forme de tableau
 $trouver = array();
@@ -45,6 +44,17 @@ for ($i = 0; $i < $nombreLettres; $i++)
     $trouver[$i] = "*"; // Rempli le mot brouillé de manière à obtenir : "********"
 }
 $trouver[$tabLettre["indice"]] = $tabLettre["lettre"]; // On place la lettre tirée au sort
+$_SESSION["trouver"] = $trouver;
 
+function parcoursGrille($grille)
+{
+    for ($horizontal = 0; $horizontal < count($grille); $horizontal++)
+    {
+            $tabTrouver = $_SESSION["trouver"];
+            $grille[$horizontal][0] = $tabTrouver[$horizontal];
+    }
+    return $grille;
+}
 
+$_SESSION["grille"] = parcoursGrille($_SESSION["grille"]);
 ?>

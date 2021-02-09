@@ -8,7 +8,7 @@ function creationGrille($nombreLettre, $nombreLignes)
         $grille[$horizontal] = array($nombreLignes);
         for ($vertical = 0; $vertical < $nombreLignes; $vertical++)
         {
-            $grille[$horizontal][$vertical] = "une valeur à affectée"; // Affecter null puis remplir
+            $grille[$horizontal][$vertical] = "bjr"; // Affecter null puis remplir
         }
     }
     return $grille;
@@ -43,8 +43,4 @@ function affichageTableau($grille)
         }
     }
 }*/
-
-// Création de la grille
-$grille = creationGrille(8, 5);
-affichageTableau($grille);
 ?>
