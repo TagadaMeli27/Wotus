@@ -22,5 +22,16 @@ $random = rand(1, $nombreMots);
 $req->execute(array($random));
 
 $mot = $req->fetch()[0];
-echo $mot;
+echo $mot."<br/>";
+
+function randomLettre($mot, $nombreLettres)
+{
+    $tabMot = str_split($mot); // Converti une chaine de caractère en tableaux :)
+    $random = rand(0, $nombreLettres-1); // Tirage random pour rechercher une lettre dans le mot à afficher
+    $tabLettre = array("lettre" => $tabMot[$random], "indice" => $random);
+    return $tabLettre;
+}
+
+$tabLettre = randomLettre($mot, 8);
+echo "La lettre tirée est la lettre : ".$tabLettre["lettre"]." et sa position dans le mot : ".$tabLettre["indice"];
 ?>
