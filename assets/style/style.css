@@ -44,14 +44,14 @@ input[type="button"]
     margin: 20px;
     font-size: 2em;
     font-weight: bold;
-    background-color:#fff300;
+    background-color:#ffd500;
     color: #222222;
 }
 
 input[type="button"]:hover
 {
     cursor: pointer;
-    background-color:#efe400;
+    background-color:#e9c300;
 }
 
 #regle
@@ -59,7 +59,29 @@ input[type="button"]:hover
     position:absolute;
     display:none;
     background-color:#ebebeb;
-    width: 400px;
-    height: 400px;
+    width: 650px;
+    height: 550px;
     border:black solid 2px;
+    padding:10px;
+    font-size: large;
+    font-family: Helvetica, sans-serif;
+}
+
+#regle h1, h2
+{
+   text-align: center;
+}
+
+#BtnRetour
+{
+    width: 100px;
+    padding: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    background-color:#ffd500;
+    color: #222222;
+    display: block;
+    margin: 50px auto 0 auto;
+
+
 }
