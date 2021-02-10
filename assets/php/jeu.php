@@ -2,18 +2,24 @@
 session_start();
 // supprimer une session : unset($_SESSION["newsession"]);
 
+// S'il y a déjà des sessions on les supprimes
+if (isset($_SESSION["mot"])) 
+{
+    unset($_SESSION["tour"]);
+    unset($_SESSION["mot"]);
+    unset($_SESSION["nombreLettres"]);
+    unset($_SESSION["grille"]);
+    unset($_SESSION["trouver"]);
+}
+
 include("grille.php");
 $_SESSION["nombreLettres"] = 8; // C'est ici qu'on instaure le nombre de lettre des mots de la partie
-
-if (!isset($_SESSION["mot"])) // Si un mot n'est pas tiré au sort on initialise la partie
-{
-    $_SESSION["tour"] = 0;
-    // Création de la grille
-    $grille = creationGrille($_SESSION["nombreLettres"], 5);
-    $_SESSION["grille"] = $grille;
-    // Initialisation
-    include("initialisation.php");
-}
+$_SESSION["tour"] = 0;
+// Création de la grille
+$grille = creationGrille($_SESSION["nombreLettres"], 5);
+$_SESSION["grille"] = $grille;
+// Initialisation
+include("initialisation.php");
 ?>
 
 <!DOCTYPE html>

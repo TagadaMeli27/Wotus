@@ -47,7 +47,7 @@ function parcoursGrille($grille, $ligne, $tabTrouver)
 $_SESSION["grille"] = parcoursGrille($_SESSION["grille"], $_SESSION["tour"], $tabTrouver); // Update ligne
 
 // Fin des essais : détruit les sessions
-if ($_SESSION["tour"] >= 4 || ($_SESSION["mot"] == $_SESSION["trouver"]))
+if ($_SESSION["tour"] >= 5 || ($_SESSION["mot"] == $_SESSION["trouver"]))
 {
     unset($_SESSION["tour"]);
     unset($_SESSION["mot"]);
@@ -57,7 +57,7 @@ if ($_SESSION["tour"] >= 4 || ($_SESSION["mot"] == $_SESSION["trouver"]))
 }
 
 // Envoie une réponse pour ajax de type json
-$reponse = array("ligne" => $_SESSION["tour"], "grille" => $_SESSION["grille"]);
+$reponse = array("ligne" => $_SESSION["tour"], "grille" => $_SESSION["grille"], "tabMotJoueur" => $motJoueur);
 $reponse = json_encode($reponse);
 print_r($reponse);
 ?>
