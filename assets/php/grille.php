@@ -8,7 +8,7 @@ function creationGrille($nombreLettre, $nombreLignes)
         $grille[$horizontal] = array($nombreLignes);
         for ($vertical = 0; $vertical < $nombreLignes; $vertical++)
         {
-            $grille[$horizontal][$vertical] = "bjr"; // Affecter null puis remplir
+            $grille[$horizontal][$vertical] = null;
         }
     }
     return $grille;

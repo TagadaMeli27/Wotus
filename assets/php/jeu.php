@@ -3,21 +3,17 @@ session_start();
 // supprimer une session : unset($_SESSION["newsession"]);
 
 include("grille.php");
-
 $_SESSION["nombreLettres"] = 8; // C'est ici qu'on instaure le nombre de lettre des mots de la partie
 
-/*if (!isset($_SESSION["mot"])) // Si un mot n'est pas tiré au sort on initialise la partie
-{*/
+if (!isset($_SESSION["mot"])) // Si un mot n'est pas tiré au sort on initialise la partie
+{
+    $_SESSION["tour"] = 0;
     // Création de la grille
     $grille = creationGrille($_SESSION["nombreLettres"], 5);
     $_SESSION["grille"] = $grille;
     // Initialisation
-    include("initialisation.php");/*
+    include("initialisation.php");
 }
-else
-{
-
-}*/
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +34,8 @@ else
         <input type="button" id="valider" value="Valider">
 
         <div>
-            <?php 
+            <?php
+                echo $_SESSION["mot"];
                 affichageTableau($_SESSION["grille"]);
             ?>
         </div>

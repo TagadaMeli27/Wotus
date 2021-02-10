@@ -51,10 +51,11 @@ function parcoursGrille($grille)
     for ($horizontal = 0; $horizontal < count($grille); $horizontal++)
     {
             $tabTrouver = $_SESSION["trouver"];
-            $grille[$horizontal][0] = $tabTrouver[$horizontal];
+            if ($tabTrouver[$horizontal] != "*") // Si c'est une lettre on la place dans la grille
+                $grille[$horizontal][0] = $tabTrouver[$horizontal];
     }
     return $grille;
 }
 
-$_SESSION["grille"] = parcoursGrille($_SESSION["grille"]);
+$_SESSION["grille"] = parcoursGrille($_SESSION["grille"]); // Update grille
 ?>
