@@ -21,24 +21,41 @@ table
 
 .base
 {
-    background-color: gold;
+    background-color:#0489ff;
     font-size: 0px;
 }
 
 .non
 {
-    background-color: lightcoral;
+    background-color: #0489ff;
     font-size: 1.2em;
 }
 
 .oui
 {
-    background-color: lightgreen;
+    background-color: #e80000;
     font-size: 1.2em;
 }
 
 .presque
 {
-    background-color: lightseagreen;
+    background-color: #ffd500;
     font-size: 1.2em;
+}
+
+input[type="button"]
+{
+    width: 200px;
+    padding: 10px;
+    margin: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    background-color:#ffd500;
+    color: #222222;
+}
+
+input[type="button"]:hover
+{
+    cursor: pointer;
+    background-color:#e9c300;
 }

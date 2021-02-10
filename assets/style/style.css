@@ -19,24 +19,6 @@ footer
     color: #222222;
 }
 
-#BtnFooter
-{
-    width: 200px;
-    padding: 10px;
-    margin: 10px;
-    font-size: 1em;
-    font-weight: bold;
-    background-color:#148fe9;
-    color: #222222;
-}
-
-
-#BtnFooter:hover
-{
-    cursor: pointer;
-    background-color:#1185d9;
-}
-
 input[type="button"]
 {
     width: 200px;
@@ -49,6 +31,23 @@ input[type="button"]
 }
 
 input[type="button"]:hover
+{
+    cursor: pointer;
+    background-color:#e9c300;
+}
+
+input[type="submit"]
+{
+    width: 200px;
+    padding: 10px;
+    margin: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    background-color:#ffd500;
+    color: #222222;
+}
+
+input[type="submit"]:hover
 {
     cursor: pointer;
     background-color:#e9c300;
