@@ -23,14 +23,23 @@ $(document).ready(function()
             else
                 $(this).addClass("oui");
         });
+
+        if (reponse.etatPartie != "en cours")
+        {
+            if (reponse.etatPartie == "Victoire !");
+                // Faire afficher une boite victoire + option recommencer
+            else
+                // Faire afficher une boire défaite + option recommencer
+        }
     }
     
     $("#valider").click(function()
     {
         if ($("#motJoueur").val().length == $("#nombreLettres").val()) // Bon nombre de lettre ?
         {
-            let donnees = "motJoueur=" + $("#motJoueur").val(); // /!\ il faudra faire des test dessus avant d'envoyer au serveur (nombre de caractères etc)
-            // console.log(donnees);
+            let motJoueur = $("#motJoueur").val(); // /!\ il faudra faire des test dessus avant d'envoyer au serveur (nombre de caractères etc)
+            let donnees = "motJoueur=" + motJoueur.toLowerCase(); // Converti la chaine de caractère en minuscule
+            console.log(donnees);
             $.getJSON({url : "../php/gestionPartie.php", data: donnees, success: traitementRequete});
         }
         else

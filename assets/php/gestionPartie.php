@@ -49,17 +49,22 @@ $_SESSION["grille"] = parcoursGrille($_SESSION["grille"], $_SESSION["tour"], $ta
 
 //Vérifications de fin de partie
 
-if ($_SESSION["mot"] == $_SESSION["trouver"]))
+if ($_SESSION["mot"] == $_SESSION["trouver"])
 {
     $etat="Victoire !";
-    echo ($etat+"Le mot était "+$_SESSION["trouver"]);
+    // echo ($etat."Le mot était ".$_SESSION["trouver"]);
 }
 
-if ($_SESSION["tour"] >= 5 
+if ($_SESSION["tour"] >= 7)
 {
     $etat="Défaite.";
-    echo ($etat+"Le mot était "+$_SESSION["trouver"]);
+    // echo ($etat."Le mot était ".$_SESSION["trouver"]);
 }
+
+// Envoie une réponse pour ajax de type json
+$reponse = array("ligne" => $_SESSION["tour"], "grille" => $_SESSION["grille"], "tabMotJoueur" => $motJoueur, "etatPartie" => $etat);
+$reponse = json_encode($reponse);
+print_r($reponse);
 
 // Fin des essais : détruit les sessions
 if ($_SESSION["tour"] >= 7 || ($_SESSION["mot"] == $_SESSION["trouver"]))
@@ -70,9 +75,4 @@ if ($_SESSION["tour"] >= 7 || ($_SESSION["mot"] == $_SESSION["trouver"]))
     unset($_SESSION["grille"]);
     unset($_SESSION["trouver"]);
 }
-
-// Envoie une réponse pour ajax de type json
-$reponse = array("ligne" => $_SESSION["tour"], "grille" => $_SESSION["grille"], "tabMotJoueur" => $motJoueur);
-$reponse = json_encode($reponse);
-print_r($reponse);
 ?>

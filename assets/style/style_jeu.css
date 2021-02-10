@@ -1,5 +1,10 @@
 html, body {margin: 0; padding: 0;}
 
+*
+{
+    font-family: arial;
+}
+
 main
 {
     display: flex;
@@ -12,7 +17,7 @@ main
 input[type="button"]
 {
     width: 200px;
-    padding: 10px;
+    padding: 8px;
     margin: 20px;
     font-size: 2em;
     font-weight: bold;
@@ -26,6 +31,13 @@ input[type="button"]:hover
     background-color:#e9c300;
 }
 
+input[type="text"]
+{
+    width: 200px;
+    padding: 8px;
+    font-size: 2em;
+}
+
 table, th, td 
 {
     border: 1px solid black;
@@ -37,7 +49,12 @@ th, td
     height: 50px;
     text-align: center;
     padding: 10px;
-    font-size: 1.2em;
+    font-size: 1.6em;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    font-weight: bold;
+    text-transform: capitalize;
 }
 
 table 
@@ -47,24 +64,24 @@ table
 
 .base
 {
-    background-image: url("bleu.png");
+    background-image: url("../img/bleu.png");
     font-size: 0px;
 }
 
 .non
 {
-    background-image: url("bleu.png");
-    font-size: 1.2em;
+    background-image: url("../img/rouge.png");
+    font-size: 1.6em;
 }
 
 .oui
 {
-    background-image: url("rouge.png");
-    font-size: 1.2em;
+    background-image: url("../img/vert.png");
+    font-size: 2em;
 }
 
 .presque
 {
-    background-image: url("jaune.png");
-    font-size: 1.2em;
+    background-image: url("../img/jaune.png");
+    font-size: 2em;
 }
