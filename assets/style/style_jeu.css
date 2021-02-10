@@ -21,25 +21,25 @@ table
 
 .base
 {
-    background-color:#0489ff;
+    background-image: url("bleu.png");
     font-size: 0px;
 }
 
 .non
 {
-    background-color: #0489ff;
+    background-image: url("bleu.png");
     font-size: 1.2em;
 }
 
 .oui
 {
-    background-color: #e80000;
+    background-image: url("rouge.png");
     font-size: 1.2em;
 }
 
 .presque
 {
-    background-color: #ffd500;
+    background-image: url("jaune.png");
     font-size: 1.2em;
 }
 
