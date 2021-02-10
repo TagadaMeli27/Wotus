@@ -26,10 +26,14 @@ $(document).ready(function()
 
         if (reponse.etatPartie != "en cours")
         {
-            if (reponse.etatPartie == "Victoire !");
+            /*if (reponse.etatPartie == "Victoire !");
+            {
                 // Faire afficher une boite victoire + option recommencer
+            }
             else
+            {
                 // Faire afficher une boire défaite + option recommencer
+            }  */
         }
     }
     
