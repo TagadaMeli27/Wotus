@@ -9,7 +9,7 @@ function traitement() {
     if ($mot.length==8) { //Test de la taille du mot entré
         var $essais;
         $essais+=1;
-        $nbEssais=6; //Il faut afficher après
+        $essais=6; //Il faut afficher après
 
         for ($i=0; $i<8;$i++) {
             //mettre le fond de chaque case avec l'image bleue, je vois pas comment le faire en php là
@@ -31,6 +31,15 @@ function traitement() {
                 }
             }
         }
+		for ($k=0;$k<8; $k++) {
+			print_r();
+		}
+		if ($mot=$atrouver) {
+			echo("GG");
+		}
+		else if ($essais=6) {//On calcule à l'envers dans notre script, c'était plus simple finalement
+			echo("Vous n'avez plus d'essais ! Le bon mot était "+$atrouver);
+		} 
     }
 
 }
