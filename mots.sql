@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 10 fév. 2021 à 17:09
+-- Généré le : mer. 10 fév. 2021 à 17:25
 -- Version du serveur :  10.4.17-MariaDB
 -- Version de PHP : 8.0.0
 
@@ -290,7 +290,7 @@ INSERT INTO `mots` (`id`, `mots`) VALUES
 (251, 'marabout'),
 (252, 'marecage'),
 (253, 'marsouin'),
-(254, 'mausolée'),
+(254, 'mausolee'),
 (255, 'misogyne'),
 (256, 'morphine'),
 (257, 'mousquet'),
