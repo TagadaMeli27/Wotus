@@ -47,7 +47,7 @@ function parcoursGrille($grille, $ligne, $tabTrouver)
 $_SESSION["grille"] = parcoursGrille($_SESSION["grille"], $_SESSION["tour"], $tabTrouver); // Update ligne
 
 // Fin des essais : détruit les sessions
-if ($_SESSION["tour"] >= 5 || ($_SESSION["mot"] == $_SESSION["trouver"]))
+if ($_SESSION["tour"] >= 7 || ($_SESSION["mot"] == $_SESSION["trouver"]))
 {
     unset($_SESSION["tour"]);
     unset($_SESSION["mot"]);

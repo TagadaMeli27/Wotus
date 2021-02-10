@@ -16,7 +16,7 @@ include("grille.php");
 $_SESSION["nombreLettres"] = 8; // C'est ici qu'on instaure le nombre de lettre des mots de la partie
 $_SESSION["tour"] = 0;
 // Création de la grille
-$grille = creationGrille($_SESSION["nombreLettres"], 5);
+$grille = creationGrille($_SESSION["nombreLettres"], 7);
 $_SESSION["grille"] = $grille;
 // Initialisation
 include("initialisation.php");
