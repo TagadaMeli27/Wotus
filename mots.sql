@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 10 fév. 2021 à 17:25
+-- Généré le : mer. 10 fév. 2021 à 17:28
 -- Version du serveur :  10.4.17-MariaDB
 -- Version de PHP : 8.0.0
 
@@ -245,7 +245,7 @@ INSERT INTO `mots` (`id`, `mots`) VALUES
 (206, 'immiscer'),
 (207, 'incongru'),
 (208, 'indigent'),
-(209, 'infinité'),
+(209, 'infinite'),
 (210, 'inherent'),
 (211, 'jeunesse'),
 (212, 'jalousie'),
