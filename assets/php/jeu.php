@@ -38,7 +38,6 @@ include("initialisation.php");
         <input type="text" id="motJoueur" placeholder="Saisir un mot">
         <input type="hidden" id="nombreLettres" value="<?php echo $_SESSION["nombreLettres"]; ?>">
         <input type="button" id="valider" value="Valider">
-
         <div>
             <?php
                 echo $_SESSION["mot"];
@@ -46,13 +45,5 @@ include("initialisation.php");
             ?>
         </div>
     </main>
-
-    <footer>
-
-        <div>
-        <input type="button" id="BtnFooter" value="Mentions légales">
-        </div>
-
-    </footer>
 </body>
 </html>
