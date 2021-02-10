@@ -3,7 +3,7 @@
 ?>
 <?php
 session_start();
-// supprimer une session : unset($_SESSION["newsession"]);
+// Supprimer une session : unset($_SESSION["newsession"]);
 
 // Affectation des variables
 $_SESSION["tour"] += 1; // On est au tour n+1
@@ -22,11 +22,11 @@ for ($i = 0; $i < $nombreLettres; $i++) // Parcours du tableau "mot"
         {
             if ($i != $j) // Si c'est pas la bonne lettre
             {
-                $tabTrouver[$j] = "."; // On rempli la case du mot du joueur de la lettre qui n'est pas bien placée
+                $tabTrouver[$j] = "."; // On remplit la case du mot du joueur de la lettre qui n'est pas bien placée
             }
             else // Si c'est la bonne lettre
             {
-                $tabTrouver[$i] = $tabMot[$i]; // On rempli la case correspondante avec la bonne lettre
+                $tabTrouver[$i] = $tabMot[$i]; // On remplit la case correspondante avec la bonne lettre
                 $i++;
             }
         }   
@@ -38,7 +38,7 @@ function parcoursGrille($grille, $ligne, $tabTrouver)
 {
     for ($horizontal = 0; $horizontal < count($grille); $horizontal++)
     {
-            if ($tabTrouver[$horizontal] != "*") // Si c'est une lettre on la place dans la grille
+            if ($tabTrouver[$horizontal] != "*") // Si c'est une lettre, on la place dans la grille
                 $grille[$horizontal][$ligne] = $tabTrouver[$horizontal];
     }
     return $grille;
@@ -56,7 +56,7 @@ if ($_SESSION["tour"] >= 4 || ($_SESSION["mot"] == $_SESSION["trouver"]))
     unset($_SESSION["trouver"]);
 }
 
-// Envoie une réponse pour ajax de type json
+// Envoie une réponse pour AJAX de type json
 $reponse = array("ligne" => $_SESSION["tour"], "grille" => $_SESSION["grille"]);
 $reponse = json_encode($reponse);
 print_r($reponse);
