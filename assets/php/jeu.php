@@ -2,7 +2,7 @@
 session_start();
 // supprimer une session : unset($_SESSION["newsession"]);
 
-// S'il y a déjà des sessions on les supprimes
+// S'il y a déjà des sessions on les supprime
 if (isset($_SESSION["mot"])) 
 {
     unset($_SESSION["tour"]);
@@ -13,7 +13,7 @@ if (isset($_SESSION["mot"]))
 }
 
 include("grille.php");
-$_SESSION["nombreLettres"] = 8; // C'est ici qu'on instaure le nombre de lettre des mots de la partie
+$_SESSION["nombreLettres"] = 8; // C'est ici qu'on instaure le nombre de lettres des mots de la partie
 $_SESSION["tour"] = 0;
 // Création de la grille
 $grille = creationGrille($_SESSION["nombreLettres"], 7);

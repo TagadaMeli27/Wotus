@@ -3,7 +3,7 @@
 ?>
 <?php
 session_start();
-// supprimer une session : unset($_SESSION["newsession"]);
+// Supprimer une session : unset($_SESSION["newsession"]);
 
 // Affectation des variables
 $_SESSION["tour"] += 1; // On est au tour n+1
@@ -12,6 +12,7 @@ if (isset($_GET))
 $nombreLettres = $_SESSION["nombreLettres"];
 $tabTrouver = $_SESSION["trouver"];
 $tabMot = str_split($_SESSION["mot"]);
+$etat="en cours"; //On initialise le marqueur d'état, il est donc neutre
 
 // Test des lettres
 for ($i = 0; $i < $nombreLettres; $i++) // Parcours du tableau "mot"
@@ -22,11 +23,11 @@ for ($i = 0; $i < $nombreLettres; $i++) // Parcours du tableau "mot"
         {
             if ($i != $j) // Si c'est pas la bonne lettre
             {
-                $tabTrouver[$j] = "."; // On rempli la case du mot du joueur de la lettre qui n'est pas bien placée
+                $tabTrouver[$j] = "."; // On remplit la case du mot du joueur de la lettre qui n'est pas bien placée
             }
             else // Si c'est la bonne lettre
             {
-                $tabTrouver[$i] = $tabMot[$i]; // On rempli la case correspondante avec la bonne lettre
+                $tabTrouver[$i] = $tabMot[$i]; // On remplit la case correspondante avec la bonne lettre
                 $i++;
             }
         }   
@@ -38,13 +39,27 @@ function parcoursGrille($grille, $ligne, $tabTrouver)
 {
     for ($horizontal = 0; $horizontal < count($grille); $horizontal++)
     {
-            if ($tabTrouver[$horizontal] != "*") // Si c'est une lettre on la place dans la grille
+            if ($tabTrouver[$horizontal] != "*") // Si c'est une lettre, on la place dans la grille
                 $grille[$horizontal][$ligne] = $tabTrouver[$horizontal];
     }
     return $grille;
 }
 
 $_SESSION["grille"] = parcoursGrille($_SESSION["grille"], $_SESSION["tour"], $tabTrouver); // Update ligne
+
+//Vérifications de fin de partie
+
+if ($_SESSION["mot"] == $_SESSION["trouver"]))
+{
+    $etat="Victoire !";
+    echo ($etat+"Le mot était "+$_SESSION["trouver"]);
+}
+
+if ($_SESSION["tour"] >= 5 
+{
+    $etat="Défaite.";
+    echo ($etat+"Le mot était "+$_SESSION["trouver"]);
+}
 
 // Fin des essais : détruit les sessions
 if ($_SESSION["tour"] >= 7 || ($_SESSION["mot"] == $_SESSION["trouver"]))
