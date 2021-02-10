@@ -4,15 +4,22 @@ $(document).ready(function()
 	{
         console.log(reponse); // On récup un object JSON
         let ligne = reponse.ligne;
+        let texte = reponse.tabMotJoueur;
         console.log(ligne);
         let tr = $("table tr").eq(ligne).children(); // Pointe sur la bonne ligne et récup les enfants
         tr.each(function(index)
         {
             $(this).text(reponse.grille[index][ligne]);
             if ($(this).text() == "*")
+            {
                 $(this).addClass("non");
+                $(this).text(reponse.tabMotJoueur[index]);
+            }
             else if ($(this).text() == ".")
+            {
                 $(this).addClass("presque");
+                $(this).text(texte[index]);
+            } 
             else
                 $(this).addClass("oui");
         });
@@ -33,13 +40,23 @@ $(document).ready(function()
         }
     });
 
+    // Style de base
+    $("table tr").children().each(function()
+    {
+        if ($(this).text() == "*")
+        {
+            $(this).addClass("base");
+        }
+    });
+
     // Style de la première ligne
      $("table tr").eq(0).children().each(function()
     {
         if ($(this).text() == "*")
+        {
             $(this).addClass("non");
-        else if ($(this).text() == ".")
-            $(this).addClass("presque");
+            $(this).css({fontSize : "0px"});
+        }
         else
             $(this).addClass("oui");
     });

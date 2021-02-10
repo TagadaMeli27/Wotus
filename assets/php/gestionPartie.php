@@ -12,6 +12,7 @@ if (isset($_GET))
 $nombreLettres = $_SESSION["nombreLettres"];
 $tabTrouver = $_SESSION["trouver"];
 $tabMot = str_split($_SESSION["mot"]);
+$etat="en cours"; //On initialise le marqueur d'état, il est donc neutre
 
 // Test des lettres
 for ($i = 0; $i < $nombreLettres; $i++) // Parcours du tableau "mot"
@@ -46,8 +47,22 @@ function parcoursGrille($grille, $ligne, $tabTrouver)
 
 $_SESSION["grille"] = parcoursGrille($_SESSION["grille"], $_SESSION["tour"], $tabTrouver); // Update ligne
 
+//Vérifications de fin de partie
+
+if ($_SESSION["mot"] == $_SESSION["trouver"]))
+{
+    $etat="Victoire !";
+    echo ($etat+"Le mot était "+$_SESSION["trouver"]);
+}
+
+if ($_SESSION["tour"] >= 5 
+{
+    $etat="Défaite.";
+    echo ($etat+"Le mot était "+$_SESSION["trouver"]);
+}
+
 // Fin des essais : détruit les sessions
-if ($_SESSION["tour"] >= 4 || ($_SESSION["mot"] == $_SESSION["trouver"]))
+if ($_SESSION["tour"] >= 5 || ($_SESSION["mot"] == $_SESSION["trouver"]))
 {
     unset($_SESSION["tour"]);
     unset($_SESSION["mot"]);
@@ -56,8 +71,8 @@ if ($_SESSION["tour"] >= 4 || ($_SESSION["mot"] == $_SESSION["trouver"]))
     unset($_SESSION["trouver"]);
 }
 
-// Envoie une réponse pour AJAX de type json
-$reponse = array("ligne" => $_SESSION["tour"], "grille" => $_SESSION["grille"]);
+// Envoie une réponse pour ajax de type json
+$reponse = array("ligne" => $_SESSION["tour"], "grille" => $_SESSION["grille"], "tabMotJoueur" => $motJoueur);
 $reponse = json_encode($reponse);
 print_r($reponse);
 ?>

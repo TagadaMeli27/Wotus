@@ -11,7 +11,7 @@ th, td
     height: 50px;
     text-align: center;
     padding: 10px;
-    font-size: 0em;
+    font-size: 1.2em;
 }
 
 table 
@@ -19,9 +19,16 @@ table
     border-collapse: collapse;
 }
 
+.base
+{
+    background-color: gold;
+    font-size: 0px;
+}
+
 .non
 {
     background-color: lightcoral;
+    font-size: 1.2em;
 }
 
 .oui
@@ -33,4 +40,5 @@ table
 .presque
 {
     background-color: lightseagreen;
+    font-size: 1.2em;
 }
