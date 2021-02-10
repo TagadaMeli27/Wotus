@@ -20,15 +20,14 @@ for ($i = 0; $i < $nombreLettres; $i++) // Parcours du tableau "mot"
     {
         if ($tabMot[$i] == $motJoueur[$j]) // Si une lettre du mot de base correspond à une lettre du mot saisie
         {
-            if ($i == $j) // Si c'est la bonne lettre
+            if ($i != $j) // Si c'est pas la bonne lettre
+            {
+                $tabTrouver[$j] = "."; // On rempli la case du mot du joueur de la lettre qui n'est pas bien placée
+            }
+            else // Si c'est la bonne lettre
             {
                 $tabTrouver[$i] = $tabMot[$i]; // On rempli la case correspondante avec la bonne lettre
                 $i++;
-            }
-            else
-            {
-                $tabTrouver[$i] = "tu chauffes jamy"; // On rempli la case correspondant à une lettre du mot au bon endroit du mot
-                // trouver un repère bien mieux que ça
             }
         }   
     }

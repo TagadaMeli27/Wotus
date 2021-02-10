@@ -9,6 +9,12 @@ $(document).ready(function()
         tr.each(function(index)
         {
             $(this).text(reponse.grille[index][ligne]);
+            if ($(this).text() == "*")
+                $(this).addClass("non");
+            else if ($(this).text() == ".")
+                $(this).addClass("presque");
+            else
+                $(this).addClass("oui");
         });
     }
     
@@ -25,6 +31,17 @@ $(document).ready(function()
             let messageError = "Mauvais nombre de lettres ! Veuillez saisir un mot de " + $("#nombreLettres").val() + " lettres.";
             window.alert(messageError);
         }
+    });
+
+    // Style de la première ligne
+     $("table tr").eq(0).children().each(function()
+    {
+        if ($(this).text() == "*")
+            $(this).addClass("non");
+        else if ($(this).text() == ".")
+            $(this).addClass("presque");
+        else
+            $(this).addClass("oui");
     });
 });
 

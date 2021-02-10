@@ -11,10 +11,26 @@ th, td
     height: 50px;
     text-align: center;
     padding: 10px;
-    font-size: 1.2em;
+    font-size: 0em;
 }
 
 table 
 {
     border-collapse: collapse;
+}
+
+.non
+{
+    background-color: lightcoral;
+}
+
+.oui
+{
+    background-color: lightgreen;
+    font-size: 1.2em;
+}
+
+.presque
+{
+    background-color: lightseagreen;
 }
