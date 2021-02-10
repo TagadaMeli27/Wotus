@@ -1,4 +1,4 @@
-html, body {margin: 0; padding: 0; background-color: #ebebeb;}
+html, body {margin: 0; padding: 0; background-color: #f1f1f1;}
 
 main
 {
@@ -57,8 +57,8 @@ input[type="submit"]:hover
 {   
     position:absolute;
     display:none;
-    background-color:#ebebeb;
-    width: 650px;
+    background-color:#dedede;
+    width: 750px;
     height: 550px;
     border:black solid 2px;
     padding:10px;
@@ -83,4 +83,22 @@ input[type="submit"]:hover
     margin: 50px auto 0 auto;
 
 
+}
+
+#BtnRetour:hover
+{
+    cursor: pointer;
+    background-color:#e9c300;  
+}
+
+img
+{
+    width: 500px;
+    height: 150px;
+}
+
+#slogan
+{
+    font-family: Helvetica, sans-serif;
+    font-size: 1.5em;
 }
