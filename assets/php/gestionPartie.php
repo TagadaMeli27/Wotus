@@ -55,7 +55,7 @@ if ($tabMot == $tabTrouver)
     // echo ($etat."Le mot était ".$_SESSION["trouver"]);
 }
 
-if ($_SESSION["tour"] >= 7)
+if ($_SESSION["tour"] >= 6)
 {
     $etat="Défaite.";
     // echo ($etat."Le mot était ".$_SESSION["trouver"]);
@@ -67,7 +67,7 @@ $reponse = json_encode($reponse);
 print_r($reponse);
 
 // Fin des essais : détruit les sessions
-if ($_SESSION["tour"] >= 7 || ($_SESSION["mot"] == $_SESSION["trouver"]))
+if ($_SESSION["tour"] >= 6 || ($tabMot == $tabTrouver))
 {
     unset($_SESSION["tour"]);
     unset($_SESSION["mot"]);
