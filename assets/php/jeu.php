@@ -46,6 +46,7 @@ include("initialisation.php");
         </div>
         <div id="affichage">
             <h2></h2>
+            <p></p>
             <a href="../../index.html">Recommencer</a>
         </div>
     </main>

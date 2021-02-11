@@ -2,10 +2,10 @@ $(document).ready(function()
 {
     function traitementRequete(reponse)
 	{
-        console.log(reponse); // On récup un object JSON
+        // console.log(reponse); // On récup un object JSON
         let ligne = reponse.ligne;
         let texte = reponse.tabMotJoueur;
-        console.log(ligne);
+        // console.log(ligne);
         let tr = $("table tr").eq(ligne).children(); // Pointe sur la bonne ligne et récup les enfants
         tr.each(function(index)
         {
@@ -26,14 +26,9 @@ $(document).ready(function()
 
         if (reponse.etatPartie != "en cours")
         {
-            if (reponse.etatPartie == "Victoire !")
-            {
-                // Faire afficher une boite victoire + option recommencer
-            }
-            else
-            {
-                // Faire afficher une boire défaite + option recommencer
-            }  
+            $("#affichage").css({display: "flex"});
+            $("#affichage h2").text(reponse.etatPartie);
+            $("#affichage p").text("Le mot à trouver était : " + reponse.mot); 
         }
     }
     
@@ -43,7 +38,7 @@ $(document).ready(function()
         {
             let motJoueur = $("#motJoueur").val(); // /!\ il faudra faire des test dessus avant d'envoyer au serveur (nombre de caractères etc)
             let donnees = "motJoueur=" + motJoueur.toLowerCase(); // Converti la chaine de caractère en minuscule
-            console.log(donnees);
+            // console.log(donnees);
             $.getJSON({url : "../php/gestionPartie.php", data: donnees, success: traitementRequete});
         }
         else
