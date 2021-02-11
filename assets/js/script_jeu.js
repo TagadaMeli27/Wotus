@@ -1,5 +1,6 @@
 $(document).ready(function()
 {
+    // Réponses de la requête ajax
     function traitementRequete(reponse)
 	{
         // console.log(reponse); // On récup un object JSON
@@ -31,7 +32,8 @@ $(document).ready(function()
             $("#affichage p").text("Le mot à trouver était : " + reponse.mot); 
         }
     }
-    
+
+    // Démarrage de la requête ajax au clic
     $("#valider").click(function()
     {
         if ($("#motJoueur").val().length == $("#nombreLettres").val()) // Bon nombre de lettre ?
@@ -46,6 +48,21 @@ $(document).ready(function()
             let messageError = "Mauvais nombre de lettres ! Veuillez saisir un mot de " + $("#nombreLettres").val() + " lettres.";
             window.alert(messageError);
         }
+    });
+
+    $("#motJoueur").keypress(function(event)
+    {
+        // console.log(event.which);
+        if (event.which == 13) 
+        {
+            $("#valider").click();
+        }
+    });
+
+    // Effacement du champs de saisi
+    $("#motJoueur").click(function()
+    {
+        $(this).val("");
     });
 
     // Style de base

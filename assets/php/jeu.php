@@ -40,7 +40,7 @@ include("initialisation.php");
         <input type="button" id="valider" value="Valider">
         <div>
             <?php
-                echo $_SESSION["mot"];
+                // echo $_SESSION["mot"];
                 affichageTableau($_SESSION["grille"]);
             ?>
         </div>
