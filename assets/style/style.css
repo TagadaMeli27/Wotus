@@ -27,6 +27,7 @@ input[type="button"]
     font-size: 2em;
     font-weight: bold;
     background-color:#ffd500;
+    border: solid #000 2px;
     color: #222222;
 }
 
@@ -36,7 +37,7 @@ input[type="button"]:hover
     background-color:#e9c300;
 }
 
-input[type="submit"]
+a
 {
     width: 200px;
     padding: 10px;
@@ -45,9 +46,14 @@ input[type="submit"]
     font-weight: bold;
     background-color:#ffd500;
     color: #222222;
+    text-decoration: none;
+    text-align: center;
+    border: solid #000 2px;
+    font-family: Helvetica, sans-serif;
+    display: inline-block;
 }
 
-input[type="submit"]:hover
+a:hover
 {
     cursor: pointer;
     background-color:#e9c300;

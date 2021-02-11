@@ -1,4 +1,4 @@
-html, body {margin: 0; padding: 0;}
+html, body {margin: 0; padding: 0; background-color: #f1f1f1;}
 
 *
 {
@@ -36,6 +36,43 @@ input[type="text"]
     width: 200px;
     padding: 8px;
     font-size: 2em;
+    text-align: center;
+}
+
+a
+{
+    padding: 10px 20px;
+    margin: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    background-color:#ffd500;
+    color: #222222;
+    text-decoration: none;
+    text-align: center;
+    border: solid #000 2px;
+    display: inline-block;
+}
+
+a:hover
+{
+    cursor: pointer;
+    background-color:#e9c300;
+}
+
+#affichage
+{
+    position:absolute;
+    display:none;
+    background-color:#dedede;
+    width: 750px;
+    height: 550px;
+    border:black solid 2px;
+    padding:10px;
+    font-size: large;
+    font-family: Helvetica, sans-serif;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 table, th, td 

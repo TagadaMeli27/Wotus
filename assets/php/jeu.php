@@ -44,6 +44,10 @@ include("initialisation.php");
                 affichageTableau($_SESSION["grille"]);
             ?>
         </div>
+        <div id="affichage">
+            <h2></h2>
+            <a href="../../index.html">Recommencer</a>
+        </div>
     </main>
 </body>
 </html>
